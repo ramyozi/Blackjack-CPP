@@ -1,23 +1,19 @@
 CXX = g++
-CXXFLAGS = -Wall -Wextra -pedantic -std=c++11
-LDFLAGS =
+CXXFLAGS = -std=c++11 -Wall -Wextra -Wpedantic
 
-SRC = Blackjack.cpp Deck.cpp Carte.cpp Joueur.cpp Dealer.cpp
-OBJ = $(SRC:.cpp=.o)
-DEPS = $(OBJ:.o=.d)
-TARGET = blackjack
-
-.PHONY: all clean
+TARGET = main
+OBJS = main.o Carte.o
 
 all: $(TARGET)
 
-$(TARGET): $(OBJ)
-	$(CXX) $(LDFLAGS) -o $@ $^
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(TARGET)
 
--include $(DEPS)
+main.o: main.cpp Carte.h
+	$(CXX) $(CXXFLAGS) -c main.cpp
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -MMD -MP -c -o $@ $<
+Carte.o: Carte.cpp Carte.h
+	$(CXX) $(CXXFLAGS) -c Carte.cpp
 
 clean:
-	rm -f $(OBJ) $(DEPS) $(TARGET)
+	rm -f $(OBJS) $(TARGET)

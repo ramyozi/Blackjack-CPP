@@ -8,7 +8,7 @@ using namespace std;
 class Deck
 {
 private:
-    Carte[] Cartes;
+    Carte*Cartes;
     int index;
 public:
     Deck(int numDecks);

@@ -11,13 +11,13 @@ using namespace std;
 class Blackjack
 {
 private:
-    Deck deck;
+    Deck deckJeu;
     Joueur joueur;
     Dealer dealer;
     int numDecks;
     int numJoueurs;
 public:
-    Blackjack();
+    // Blackjack();
     ~Blackjack();
     void afficherIntro();
     void startGame() ;

@@ -7,21 +7,24 @@
 #include <vector>
 #include <string.h>
 #include <fstream>
-
-
+#include <typeinfo>
 using namespace std;
+
+
 #pragma once
 
-class Carte
-{
-private:
-    int valeur;
-    string suit;
-    string rank;
-public:
+class Carte {
+    private:
+        int valeur;
+        string suit;
+        string rank;
 
-    Carte(string suit, string rank);
-    int getValeur();
+    public:
+        Carte(string s, string r);
+        int getValeur();
+        void ChoisirValeurA();
+
 };
+
 
 #endif
