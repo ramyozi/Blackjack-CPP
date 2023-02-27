@@ -1,0 +1,17 @@
+    Le BlackJack se joue avec une ou plusieurs cartes standard de 52 cartes.
+
+    Le but du jeu est de battre le croupier en ayant une main qui vaut plus de points que la main du croupier, sans dépasser 21 points.
+
+    Les As peuvent valoir soit 1 ou 11 points, les figures (rois, dames et valets) valent chacune 10 points, et les cartes numérotées valent leur valeur nominale (par exemple, un 2 vaut 2 points).
+
+    Au début de la partie, chaque joueur reçoit deux cartes et le croupier en reçoit une visible et une cachée.
+
+    Les joueurs peuvent demander des cartes supplémentaires ("tirer") pour améliorer leur main, mais s'ils dépassent 21 points, ils perdent automatiquement la partie.
+
+    Si le joueur n'a pas dépassé 21 points après avoir tiré des cartes supplémentaires, il peut "rester" et la partie passe au joueur suivant.
+
+    Une fois que tous les joueurs ont fini leur tour, le croupier révèle sa carte cachée et tire des cartes supplémentaires jusqu'à ce que sa main soit d'au moins 17 points.
+
+    Si la main du croupier dépasse 21 points, tous les joueurs restants gagnent automatiquement.
+
+    Sinon, le joueur dont la main vaut le plus de points sans dépasser 21 gagne la partie. Si deux joueurs ont des mains de même valeur, la partie est considérée comme nulle ou "poussée".

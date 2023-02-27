@@ -1,0 +1,60 @@
+@startuml Black Jack
+
+
+
+class Blackjack {
+    - Deck deck
+    - Joueur joueur
+    - Dealer dealer
+    - int numDecks
+    - int numJoueurs
+    + Blackjack()
+    + ~Blackjack()
+    + startGame() : void
+    + playRound() : void
+    + checkWinner() : void
+}
+
+
+class Joueur {
+    - Carte[] main
+    - int mainValeur
+    + joueur()
+    + ~joueur()
+    + ajoutCarte(Carte carte) : void
+    + getValeurMain() : int
+    + clearMain() : void
+}
+
+
+class Dealer {
+    - Carte[] main
+    - int mainValeur
+    + Dealer()
+    + ~Dealer()
+    + ajoutCarte(Carte Carte) : void
+    + getValeurMain() : int
+    + clearHand() : void
+    + playHand(Deck deck) : void
+}
+
+
+class Deck {
+    - Carte[] Cartes
+    - int index
+    + Deck(int numDecks)
+    + ~Deck()
+    + shuffle() : void
+    + dealCarte() : Carte
+}
+
+class Carte{
+    - int valeur
+    - string suit
+    - string rank
+    + Carte(string suit, string rank)
+    + getValeur() : int
+}
+
+
+@enduml
